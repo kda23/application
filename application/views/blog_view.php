@@ -12,57 +12,32 @@
 			<div class="row">
 				<div class="col-md-9 col-sm-12">
 					<!-- blog post -->
-					<div class="blog_post">
-						<div class="post_media">
-							<img src="application/views/assets/img/post_1.jpg" alt="post image">
-						</div>
-						<div class="post_info">
-							<div class="post_date montserrat-text uppercase">january 13, 2016</div>
-							<i class="icon ion-chatbox-working"></i>
-							<span>8</span>
-							<i class="icon ion-ios-heart"></i>
-							<span>15</span>
-						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						</p>
-						<a href="single-post.html" class="link montserrat-text uppercase">continue reading <i class="icon ion-arrow-right-c"></i></a>
-					</div>
-					<!-- blog post -->
-					<div class="blog_post wow fadeInUp">
-						<div class="post_media">
-							<iframe width="560" height="400" src="https://www.youtube.com/embed/-FlxM_0S2lA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe>
-						</div>
-						<div class="post_info">
-							<div class="post_date montserrat-text uppercase">january 13, 2016</div>
-							<i class="icon ion-chatbox-working"></i>
-							<span>8</span>
-							<i class="icon ion-ios-heart"></i>
-							<span>15</span>
-						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						</p>
-						<a href="single-post.html" class="link montserrat-text uppercase">continue reading <i class="icon ion-arrow-right-c"></i></a>
-					</div>
-					<!-- blog post -->
-					<div class="blog_post wow fadeInUp">
-						<div class="post_media">
-							<iframe width="100%" height="60" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=%2Fmixpat%2Fdeep-house-228%2F" frameborder="0" ></iframe>
-						</div>
-						<div class="post_info">
-							<div class="post_date montserrat-text uppercase">january 13, 2016</div>
-							<i class="icon ion-chatbox-working"></i>
-							<span>8</span>
-							<i class="icon ion-ios-heart"></i>
-							<span>15</span>
-						</div>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						</p>
-						<a href="single-post.html" class="link montserrat-text uppercase">continue reading <i class="icon ion-arrow-right-c"></i></a>
-					</div>
+					<?php
+	
+					if(!empty($data)) {
+					for ($x = 0; $x < $data[2]; $x++) {
+						
+						echo '<div class="blog_post wow fadeInUp">
+								<div class="post_media">
+								
+								</div>
+								<div class="post_info">
+									<div class="post_date montserrat-text uppercase">january 13, 2016</div>
+									<i class="icon ion-chatbox-working"></i>
+									<span>8</span>
+									<i class="icon ion-ios-heart"></i>
+									<span>15</span>
+								</div>
 
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							</p>'.
+							'<a href="/blog/'.$data[0][$x].'" class="link montserrat-text uppercase">continue reading <i class="icon ion-arrow-right-c"></i></a>
+						</div>';	
+						}
+					}
+					?>
+					<!-- blog post -->
 					<!-- pagination -->
 					<div class="blog_pagination wow fadeInUp">
 						<a href="" class="page">
